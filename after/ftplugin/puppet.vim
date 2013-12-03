@@ -1,3 +1,7 @@
+if !get(g:, 'puppet_align', 0)
+    finish
+endif
+
 inoremap <buffer> <silent> > ><Esc>:call <SID>puppetalign()<CR>A
 function! s:puppetalign()
     let p = '^\s*\w+\s*[=+]>.*$'
